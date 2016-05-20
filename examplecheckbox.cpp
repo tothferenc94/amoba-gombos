@@ -14,14 +14,21 @@ void ExampleCheckBox::draw() const
 {
     gout << move_to(_x, _y) << color(255,255,255) << box(_size_x, _size_y);
     gout << move_to(_x+2, _y+2) << color(0,0,0) << box(_size_x-4, _size_y-4);
-    gout << move_to(_x+4, _y) << color(255,255,255) << text(kar);
-    if (_checked && valtas && aktiv)
-    {
-        gout.load_font("LiberationSans-Regular.ttf",15);
+
+    if(aktiv){
         gout << move_to(_x+4, _y) << color(255,255,255) << text(kar);
+
+        if (_checked && valtas )
+        {
+            gout.load_font("LiberationSans-Regular.ttf",15);
+            gout << move_to(_x+4, _y) << color(255,255,255) << text(kar);
+        }
+        if (_checked){
+            gout.load_font("LiberationSans-Regular.ttf",15);
+            gout << move_to(_x+4, _y) << color(255,255,255) << text(kar);
+        }
     }
-    if (_checked && aktiv){
-        gout.load_font("LiberationSans-Regular.ttf",15);
+    if(!aktiv){
         gout << move_to(_x+4, _y) << color(255,255,255) << text(kar);
     }
 }

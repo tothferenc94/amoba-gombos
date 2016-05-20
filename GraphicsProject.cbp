@@ -51,9 +51,13 @@
 		<Unit filename="CountBox.h.save" />
 		<Unit filename="JatekMester.cpp" />
 		<Unit filename="JatekMester.h" />
+		<Unit filename="Szabalyok.cpp" />
 		<Unit filename="examplecheckbox.cpp" />
 		<Unit filename="examplecheckbox.hpp" />
+		<Unit filename="focus.cpp" />
+		<Unit filename="focus.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="szabalyok.h" />
 		<Unit filename="textbox.cpp" />
 		<Unit filename="textbox.h" />
 		<Unit filename="widgets.cpp" />

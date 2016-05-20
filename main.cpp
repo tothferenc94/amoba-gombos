@@ -1,4 +1,3 @@
-#include "graphics.hpp"
 #include "widgets.hpp"
 #include "examplecheckbox.hpp"
 #include <vector>
@@ -8,43 +7,16 @@
 #include "textbox.h"
 #include "Button.h"
 #include "JatekMester.h"
-
+#include "szabalyok.h"
+#include "focus.h"
 using namespace std;
 using namespace genv;
 
-void event_loop(vector<Widget*>& widgets)
-{
-    event ev;
-    int focus = -1;
-    while(gin >> ev )
-    {
-        if (ev.type == ev_mouse && ev.button == btn_left)
-        {
-            for (size_t i=0; i<widgets.size(); i++)
-            {
-                if (widgets[i]->is_selected(ev.pos_x, ev.pos_y))
-                {
-                    focus = i;
-                }
-            }
-        }
-        if (focus!=-1)
-        {
-            widgets[focus]->handle(ev);
-        }
-        for (size_t i=0; i<widgets.size(); i++)
-        {
-            widgets[i]->draw();
-        }
-        gout << refresh;
-    }
-}
-
-
 int main()
 {
-    gout.open(650,650);
     vector<Widget*> w;
+    Focus f(w);
+    f.inditas();
     vector<ExampleCheckBox*> v;
 
     for(int k=0; k<40; k++){
@@ -54,7 +26,7 @@ int main()
             w.push_back(b1);
            }};
 
-    Lambda* b2 = new Lambda(100,5,100,30,[&v]()
+    Lambda * b2 = new Lambda(100,5,100,30,[&v]()
         {
             for(int i=0; i<1600; i++){
                 v[i]->valtas = !v[i]->valtas;
@@ -65,6 +37,9 @@ int main()
         });
 
     w.push_back(b2);
-    event_loop(w);
+    Szabalyok sz(v);
+    sz.handle(v);
+    f.handle(w);
+
     return 0;
 }

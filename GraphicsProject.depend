@@ -335,16 +335,15 @@
 	"graphics.hpp"
 	"widgets.hpp"
 
-1463756664 source:c:\users\tóth ferenc\desktop\badandó 3 másolata\examplecheckbox.cpp
+1463762104 source:c:\users\tóth ferenc\desktop\badandó 3 másolata\examplecheckbox.cpp
 	"examplecheckbox.hpp"
 	"graphics.hpp"
 
-1463756908 c:\users\tóth ferenc\desktop\badandó 3 másolata\examplecheckbox.hpp
+1463782076 c:\users\tóth ferenc\desktop\badandó 3 másolata\examplecheckbox.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 
-1463756750 source:c:\users\tóth ferenc\desktop\badandó 3 másolata\main.cpp
-	"graphics.hpp"
+1463783580 source:c:\users\tóth ferenc\desktop\badandó 3 másolata\main.cpp
 	"widgets.hpp"
 	"examplecheckbox.hpp"
 	<vector>
@@ -354,13 +353,15 @@
 	"textbox.h"
 	"Button.h"
 	"JatekMester.h"
+	"szabalyok.h"
+	"focus.h"
 
 1462275587 c:\users\tóth ferenc\desktop\badandó 3 másolata\textbox.h
 	"graphics.hpp"
 	"widgets.hpp"
 	<vector>
 
-1463744310 c:\users\tóth ferenc\desktop\badandó 3 másolata\jatekmester.h
+1463762211 c:\users\tóth ferenc\desktop\badandó 3 másolata\jatekmester.h
 	"graphics.hpp"
 	"widgets.hpp"
 	"string"
@@ -382,4 +383,132 @@
 	"graphics.hpp"
 	"string"
 	"vector"
+
+1463783414 source:c:\users\tóth ferenc\desktop\badandó 3 másolata\szabalyok.cpp
+	"szabalyok.h"
+	"graphics.hpp"
+	"string"
+	<vector>
+	<functional>
+	"examplecheckbox.hpp"
+
+1463782991 c:\users\tóth ferenc\desktop\badandó 3 másolata\szabalyok.h
+	"examplecheckbox.hpp"
+	<functional>
+
+1463775324 source:c:\users\tóth ferenc\desktop\badandó 3 másolata\focus.cpp
+	"widgets.hpp"
+	"focus.h"
+
+1463775299 c:\users\tóth ferenc\desktop\badandó 3 másolata\focus.h
+	"graphics.hpp"
+	"widgets.hpp"
+
+1462275587 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\button.cpp
+	"Button.h"
+	"graphics.hpp"
+
+1462275587 c:\users\tóth ferenc\desktop\amoba tóth ferenc\button.h
+	"graphics.hpp"
+	"widgets.hpp"
+
+1460891965 c:\users\tóth ferenc\desktop\amoba tóth ferenc\include\graphics.hpp
+	<string>
+
+1462275587 c:\users\tóth ferenc\desktop\amoba tóth ferenc\widgets.hpp
+	"graphics.hpp"
+	<string>
+	<vector>
+
+1463315332 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\choosebox.cpp
+	"ChooseBox.h"
+	"graphics.hpp"
+	<string>
+	<fstream>
+
+1462275787 c:\users\tóth ferenc\desktop\amoba tóth ferenc\choosebox.h
+	"graphics.hpp"
+	"widgets.hpp"
+	<vector>
+	<string>
+
+1462275587 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\countbox.cpp
+	"graphics.hpp"
+	"CountBox.h"
+	<sstream>
+	<string>
+	<fstream>
+
+1462275587 c:\users\tóth ferenc\desktop\amoba tóth ferenc\countbox.h
+	"graphics.hpp"
+	"widgets.hpp"
+
+1463762104 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\examplecheckbox.cpp
+	"examplecheckbox.hpp"
+	"graphics.hpp"
+
+1463782076 c:\users\tóth ferenc\desktop\amoba tóth ferenc\examplecheckbox.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1463775324 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\focus.cpp
+	"widgets.hpp"
+	"focus.h"
+
+1463775299 c:\users\tóth ferenc\desktop\amoba tóth ferenc\focus.h
+	"graphics.hpp"
+	"widgets.hpp"
+
+1463753283 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\jatekmester.cpp
+	"JatekMester.h"
+	"graphics.hpp"
+	"string"
+	"vector"
+
+1463762211 c:\users\tóth ferenc\desktop\amoba tóth ferenc\jatekmester.h
+	"graphics.hpp"
+	"widgets.hpp"
+	"string"
+	"examplecheckbox.hpp"
+	"vector"
+	<functional>
+
+1463783580 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\main.cpp
+	"widgets.hpp"
+	"examplecheckbox.hpp"
+	<vector>
+	<string>
+	"CountBox.h"
+	"ChooseBox.h"
+	"textbox.h"
+	"Button.h"
+	"JatekMester.h"
+	"szabalyok.h"
+	"focus.h"
+
+1462275587 c:\users\tóth ferenc\desktop\amoba tóth ferenc\textbox.h
+	"graphics.hpp"
+	"widgets.hpp"
+	<vector>
+
+1463782991 c:\users\tóth ferenc\desktop\amoba tóth ferenc\szabalyok.h
+	"examplecheckbox.hpp"
+	<functional>
+
+1463784067 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\szabalyok.cpp
+	"szabalyok.h"
+	"graphics.hpp"
+	"string"
+	<vector>
+	<functional>
+	"examplecheckbox.hpp"
+
+1462275587 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\textbox.cpp
+	"graphics.hpp"
+	"textbox.h"
+	<fstream>
+
+1462275587 source:c:\users\tóth ferenc\desktop\amoba tóth ferenc\widgets.cpp
+	"widgets.hpp"
+	"graphics.hpp"
 

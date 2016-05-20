@@ -6,10 +6,11 @@
 
 class ExampleCheckBox : public Widget {
 public:
+    char kar;
     bool _checked;
     bool valtas;
     bool aktiv;
-    char kar;
+
     ExampleCheckBox(int x, int y, int sx, int sy);
     virtual void draw() const;
     virtual void handle(genv::event ev);
