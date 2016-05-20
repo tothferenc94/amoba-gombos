@@ -1,4 +1,3 @@
-#include "graphics.hpp"
 #include "widgets.hpp"
 #include "examplecheckbox.hpp"
 #include <vector>
@@ -7,77 +6,40 @@
 #include "ChooseBox.h"
 #include "textbox.h"
 #include "Button.h"
-#include <functional>
-
+#include "JatekMester.h"
+#include "szabalyok.h"
+#include "focus.h"
 using namespace std;
 using namespace genv;
 
-void event_loop(vector<Widget*>& widgets)
-{
-    event ev;
-    int focus = -1;
-    while(gin >> ev )
-    {
-        if (ev.type == ev_mouse && ev.button == btn_left)
-        {
-            for (size_t i=0; i<widgets.size(); i++)
-            {
-                if (widgets[i]->is_selected(ev.pos_x, ev.pos_y))
-                {
-                    focus = i;
-                }
-            }
-        }
-        if (focus!=-1)
-        {
-            widgets[focus]->handle(ev);
-        }
-        for (size_t i=0; i<widgets.size(); i++)
-        {
-            widgets[i]->draw();
-        }
-        gout << refresh;
-    }
-}
-
-
 int main()
 {
-    gout.open(600,600);
     vector<Widget*> w;
-    vector<string> elemek;
+    Focus f(w);
+    f.inditas();
+    vector<ExampleCheckBox*> v;
 
-    elemek.push_back("totfe2");
-    elemek.push_back("tarba4");
-    elemek.push_back("orbba");
-    elemek.push_back("saman");
-    elemek.push_back("renag");
-    elemek.push_back("totan");
-    elemek.push_back("csuba");
+    for(int k=0; k<40; k++){
+           for(int l=0; l<40; l++){
+            ExampleCheckBox * b1 = new ExampleCheckBox(10+k*15,50+l*15,17,17);
+            v.push_back(b1);
+            w.push_back(b1);
+           }};
 
-    ExampleCheckBox * b1 = new ExampleCheckBox(30,10,30,30);
-    ExampleCheckBox * b2 = new ExampleCheckBox(30,50,30,30);
-    CountBox * b3 = new CountBox(30,130,100,30,990,1010,1000);       //CountBox( x, y, size_x, size_y, min, max, kezdõérték)
-    CountBox * b4 = new CountBox(170,130,220,75,980,1020,1000);
-    ChooseBox * b5 = new ChooseBox(30,250,160,20,elemek);
-    ChooseBox * b6 = new ChooseBox(230,250,330,75,elemek);
-    TextBox * b7 = new TextBox(200,10,120,30);
-
-    Lambda *b8 = new Lambda(350,10,50,50,[&b3,b4]()
+    Lambda * b2 = new Lambda(100,5,100,30,[&v]()
         {
-            b3->kapcsolo=!b3->kapcsolo;
-            b4->kapcsolo=!b4->kapcsolo;
-         });
+            for(int i=0; i<1600; i++){
+                v[i]->valtas = !v[i]->valtas;
+                if(v[i]->_checked){
+                    v[i]->aktiv=false;
+                }
+            }
+        });
 
-    w.push_back(b1);
     w.push_back(b2);
-    w.push_back(b3);
-    w.push_back(b4);
-    w.push_back(b5);
-    w.push_back(b6);
-    w.push_back(b7);
-    w.push_back(b8);
+    Szabalyok sz(v);
+    sz.handle(v);
+    f.handle(w);
 
-    event_loop(w);
     return 0;
 }
