@@ -2,6 +2,17 @@
 #include "graphics.hpp"
 using namespace genv;
 
+
+Lambda::Lambda(int x, int y, int sx, int sy, std::function<void()> funct):Button(x, y, sx, sy)
+{
+    lambda_fv = funct;
+}
+void Lambda::action()
+{
+    lambda_fv();
+}
+
+
 Button::Button(int x, int y, int sx, int sy): Widget(x,y,sx,sy)
 {
     _checked=false;
@@ -25,16 +36,15 @@ void Button::handle(event ev)
     if (ev.type == ev_key && (ev.keycode == key_enter || ev.keycode == ' '))
     {
         _checked = !_checked;
+        action();
     }
     if (ev.type == ev_mouse && is_selected(ev.pos_x, ev.pos_y) && ev.button==btn_left)
     {
         _checked = !_checked;
+        action();
     }
 }
 bool Button::is_checked() const
 {
     return _checked;
-}
-void Button::action(event ev)
-{
 }

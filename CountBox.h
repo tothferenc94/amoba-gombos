@@ -6,14 +6,14 @@
 
 class CountBox : public Widget
 {
-protected:
+public:
     bool _checked;
     double FontSize;
     int mini;
     int maxi;
     int szam;
+    bool kapcsolo;
 
-public:
     CountBox(int x, int y, int sx, int sy, int minimum, int maximum, int kezdoertek);
     virtual void draw() const ;
     virtual void handle(genv::event ev);

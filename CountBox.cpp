@@ -10,7 +10,8 @@ using namespace std;
 CountBox::CountBox(int x, int y, int sx, int sy, int minimum, int maximum, int kezdoertek)
     : Widget(x,y,sx,sy)
 {
-    _checked=false;
+    _checked = false;
+    kapcsolo = false;
     FontSize=sy-10;
     mini = minimum;
     maxi = maximum;
@@ -62,25 +63,25 @@ void CountBox::handle(event ev)
         fajl.close();
     }
 
-    if (ev.type == ev_key && (ev.keycode == key_up || ev.keycode == key_pgup) && szam < maxi)
+    if (ev.type == ev_key && (ev.keycode == key_up || ev.keycode == key_pgup) && szam < maxi && kapcsolo == true)
     {
         szam = szam + 1;
     }
 
-    if (ev.type == ev_key && (ev.keycode == key_down || ev.keycode == key_pgdn) && szam > mini)
+    if (ev.type == ev_key && (ev.keycode == key_down || ev.keycode == key_pgdn) && szam > mini && kapcsolo == true)
     {
         szam = szam - 1;
     }
 
     if (ev.type == ev_mouse && ev.pos_x > _x+_size_x-20 && ev.pos_x < _x+_size_x && ev.pos_y > _y &&
-            ev.pos_y < _y+(_size_y)/2 && ev.button == btn_left && szam < maxi)
+            ev.pos_y < _y+(_size_y)/2 && ev.button == btn_left && szam < maxi && kapcsolo == true)
     {
 
         szam = szam + 1;
     }
 
     if (ev.type == ev_mouse && ev.pos_x > _x+_size_x-20 && ev.pos_x < _x+_size_x && ev.pos_y > _y+(_size_y)/2 &&
-            ev.pos_y < _y+_size_y && ev.button == btn_left && szam > mini)
+            ev.pos_y < _y+_size_y && ev.button == btn_left && szam > mini && kapcsolo == true)
     {
 
         szam = szam - 1;

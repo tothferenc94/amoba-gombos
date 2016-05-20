@@ -12,6 +12,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -29,7 +30,6 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-std=c++11" />
 			<Add option="-fexceptions" />
 			<Add directory="include" />
 		</Compiler>
@@ -49,15 +49,9 @@
 		<Unit filename="CountBox.cpp.save" />
 		<Unit filename="CountBox.h" />
 		<Unit filename="CountBox.h.save" />
-		<Unit filename="JatekMester.cpp" />
-		<Unit filename="JatekMester.h" />
-		<Unit filename="Szabalyok.cpp" />
 		<Unit filename="examplecheckbox.cpp" />
 		<Unit filename="examplecheckbox.hpp" />
-		<Unit filename="focus.cpp" />
-		<Unit filename="focus.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="szabalyok.h" />
 		<Unit filename="textbox.cpp" />
 		<Unit filename="textbox.h" />
 		<Unit filename="widgets.cpp" />
